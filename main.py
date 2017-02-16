@@ -1,13 +1,12 @@
-import requests
 import timeit
-import numpy as np
 
+import numpy as np
+import requests
 from lxml import html
-from pprint import pprint
 
 start = timeit.default_timer()
 
-all_page1  = requests.get("http://www.uio.no/studier/emner/matnat/ifi/")
+all_page1 = requests.get("http://www.uio.no/studier/emner/matnat/ifi/")
 all_tree1 = html.fromstring(all_page1.content)
 
 all_page2 = requests.get("http://www.uio.no/studier/emner/matnat/ifi/?page=2&u-page=2")
@@ -39,4 +38,4 @@ end = timeit.default_timer()
 
 np.save('courses.npy', courses)
 print("File saved!")
-print("\nCompleted in", end-start, "seconds.")
+print("\nCompleted in", end - start, "seconds.")
