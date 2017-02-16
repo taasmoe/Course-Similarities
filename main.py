@@ -28,9 +28,9 @@ for url_ending in all_courses:
     tree = html.fromstring(page.content)
 
     title = "".join(tree.xpath('//h1/text()')).strip("\t\n")
-    about = "".join(tree.xpath('//div[@id="course-content"]/*/text()')).strip("\t\n")
+    about = "".join(tree.xpath('//div[@id="course-content"]/p/*/text()')).strip("\t\n")
     outcome = "".join(tree.xpath(
-        '//div[@id="learning-outcomes"]/*/text()|//div[@id="learning-outcomes"]/ul/*/text()')).strip("\t\n")
+        '//div[@id="learning-outcomes"]/ul/*/text()')).strip("\t\n")
 
     courses[title] = {"about": about, "outcome": outcome}
 
