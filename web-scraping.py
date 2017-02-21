@@ -11,10 +11,10 @@ all_tree1 = html.fromstring(all_page1.content)
 all_page2 = requests.get("http://www.uio.no/studier/emner/matnat/ifi/?page=2&u-page=2")
 all_tree2 = html.fromstring(all_page2.content)
 
-all_courses1_urls = all_tree1.xpath('//tbody/tr/td/a/@href')
-all_courses2_urls = all_tree2.xpath('//tbody/tr/td/a/@href')
+all_courses_urls1 = all_tree1.xpath('//tbody/tr/td/a/@href')
+all_courses_urls2 = all_tree2.xpath('//tbody/tr/td/a/@href')
 
-all_courses_urls = all_courses1_urls + all_courses2_urls
+all_courses_urls = all_courses_urls1 + all_courses_urls2
 
 url_stem = "http://www.uio.no"
 
