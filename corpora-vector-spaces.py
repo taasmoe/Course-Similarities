@@ -65,6 +65,11 @@ course_info = [[token.translate(punctuation_table) for token in info] for info i
 course_info = [list(filter(None, info)) for info in course_info]
 course_info = list(filter(None, course_info))
 
+dictionary = corpora.Dictionary(course_info)
+dictionary.save("course_dictionary.dict")
+
+corpus = [dictionary.doc2bow(info) for info in course_info]
+corpora.MmCorpus.serialize("corpus.mm", corpus)
 
 end = timeit.default_timer()
 
