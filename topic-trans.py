@@ -23,3 +23,8 @@ corpus_tfidf = tfidf[corpus]
 
 lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=2)
 corpus_lsi = lsi[corpus_tfidf]
+
+lsi.save("model.lsi")
+lsi = models.LsiModel.load("model.lsi")
+
+tfidf_model = models.TfidfModel(corpus, normalize=True)
