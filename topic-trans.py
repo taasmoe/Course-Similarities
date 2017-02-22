@@ -9,9 +9,9 @@ dictionary = None
 corpus = None
 
 
-if os.path.exists("course_dictionary.dict"):
-    dictionary = corpora.Dictionary.load("course_dictionary.dict")
-    corpus = corpora.MmCorpus("corpus.mm")
+if os.path.exists("Data/course_dictionary.dict"):
+    dictionary = corpora.Dictionary.load("Data/course_dictionary.dict")
+    corpus = corpora.MmCorpus("Data/corpus.mm")
 else:
     print("Error")
 
@@ -24,7 +24,7 @@ corpus_tfidf = tfidf[corpus]
 lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=2)
 corpus_lsi = lsi[corpus_tfidf]
 
-lsi.save("model.lsi")
-lsi = models.LsiModel.load("model.lsi")
+lsi.save("Data/model.lsi")
+lsi = models.LsiModel.load("Data/model.lsi")
 
 tfidf_model = models.TfidfModel(corpus, normalize=True)

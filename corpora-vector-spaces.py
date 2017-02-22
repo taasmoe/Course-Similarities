@@ -14,7 +14,7 @@ from nltk.corpus import stopwords
 
 start = timeit.default_timer()
 
-with open("courses.pkl", "rb") as f:
+with open("Data/courses.pkl", "rb") as f:
     courses = pickle.load(f)
 
 stop_words_NOR = set(stopwords.words("norwegian"))
@@ -65,12 +65,12 @@ course_info = [list(filter(None, info)) for info in course_info]
 course_info = list(filter(None, course_info))
 
 dictionary = corpora.Dictionary(course_info)
-dictionary.save("course_dictionary.dict")
+dictionary.save("Data/course_dictionary.dict")
 
 corpus = [dictionary.doc2bow(info) for info in course_info]
-corpora.MmCorpus.serialize("corpus.mm", corpus)
+corpora.MmCorpus.serialize("Data/corpus.mm", corpus)
 
-with open("course_info.txt", "wb") as f:
+with open("Data/course_info.txt", "wb") as f:
     pickle.dump(course_info, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 end = timeit.default_timer()

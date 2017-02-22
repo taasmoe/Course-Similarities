@@ -33,7 +33,7 @@ for url_ending in all_courses_urls:
     courses[title] = {"about": about, "outcome": outcome, "url": complete_url}
 
 
-with open('courses.pkl', 'wb') as f:
+with open('Data/courses.pkl', 'wb') as f:
     pickle.dump(courses, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 print("File saved!")
