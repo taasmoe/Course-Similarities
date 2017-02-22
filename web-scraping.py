@@ -27,11 +27,10 @@ for url_ending in all_courses_urls:
     tree = html.fromstring(page.content)
 
     title = "".join(tree.xpath('//h1/text()')).strip("\t\n")
-    about = "".join(tree.xpath('//div[@id="course-content"]/p/*/text()')).strip("\t\n")
-    outcome = "".join(tree.xpath(
-        '//div[@id="learning-outcomes"]/ul/*/text()')).strip("\t\n")
+    about = " ".join(tree.xpath('//div[@id="course-content"]/*//text()')).strip("\t\n")
+    outcome = " ".join(tree.xpath('//div[@id="learning-outcomes"]/*//text()')).strip("\t\n")
 
-    courses[title] = {"about": about, "outcome": outcome}
+    courses[title] = {"about": about, "outcome": outcome, "url": complete_url}
 
 
 with open('courses.pkl', 'wb') as f:
