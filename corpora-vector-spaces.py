@@ -1,4 +1,3 @@
-import os
 import logging
 import string
 import timeit
@@ -9,7 +8,7 @@ from langdetect import detect
 from pprint import pprint
 from collections import defaultdict
 
-from gensim import corpora, models, similarities
+from gensim import corpora
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 
