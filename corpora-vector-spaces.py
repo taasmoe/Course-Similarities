@@ -71,6 +71,9 @@ dictionary.save("course_dictionary.dict")
 corpus = [dictionary.doc2bow(info) for info in course_info]
 corpora.MmCorpus.serialize("corpus.mm", corpus)
 
+with open("course_info.txt", "wb") as f:
+    pickle.dump(course_info, f, protocol=pickle.HIGHEST_PROTOCOL)
+
 end = timeit.default_timer()
 
 print("Completed in", start-end, "seconds")
