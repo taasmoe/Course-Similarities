@@ -6,5 +6,4 @@ Similarity queries between the courses taught at the [Department of Informatics]
 
 Web scraping done with [Requests](http://docs.python-requests.org/en/master/).
 
-Vector room represantations done with [Gensim](https://radimrehurek.com/gensim/index.html).
-
+Vector room representations done with [Gensim](https://radimrehurek.com/gensim/index.html).
