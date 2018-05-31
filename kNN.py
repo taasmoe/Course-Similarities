@@ -2,7 +2,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 from data_preparation import load_data
 
-
+features_titles_tuple = load_data()
 
 X = features_titles_tuple[0]
 titles = features_titles_tuple[1]

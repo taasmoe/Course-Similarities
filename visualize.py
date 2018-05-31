@@ -46,9 +46,6 @@ def visualize(clustering=False, titles=False, save=False):
                              descriptions_2d[:, 1][i]),
                             size=3)
 
-    if save is True:
-        plt.savefig('scatter.png', format='png', dpi=30)
-
     plt.show()
 
-visualize()
+visualize(clustering=True)
