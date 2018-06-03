@@ -1,6 +1,6 @@
 # Course-Similarities
 
-A few experiments using t-SNE, k-means clustering, and kNN on descriptions of courses taught at the [Department of Informatics](https://www.mn.uio.no/ifi/) at the Univeristy of Oslo.
+A few experiments using t-SNE, k-means clustering, and kNN on the course descriptions from the [Department of Informatics](https://www.mn.uio.no/ifi/) at the Univeristy of Oslo.
 
 Web scraping done with [requests](http://docs.python-requests.org/en/master/).
 
