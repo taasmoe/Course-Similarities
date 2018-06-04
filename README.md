@@ -22,6 +22,12 @@ We can cluster the data, and visualize the results with t-SNE.
 
 ![](https://raw.githubusercontent.com/taasmoe/Course-Similarities/master/Plots/k-means.png)
 
+## Labelled plots
+
+We can assign the course labels to each point.
+
+![](https://raw.githubusercontent.com/taasmoe/Course-Similarities/master/Plots/example.png)
+
 ## kNN
 
 We can extract the k nearest neighbors of any course in our list.
