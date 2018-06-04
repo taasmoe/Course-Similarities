@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/taasmoe/Course-Similarities/master/Plots/example.png)
+
 # Course-Similarities
 
 A few experiments using t-SNE, k-means clustering, and kNN on the course descriptions from the [Department of Informatics](https://www.mn.uio.no/ifi/) at the Univeristy of Oslo.
