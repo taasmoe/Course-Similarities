@@ -1,11 +1,10 @@
 # Course-Similarities
 
-A few experiments using t-SNE, k-means clustering, and kNN on the courses taught at the [Department of Informatics](https://www.mn.uio.no/ifi/) at the Univeristy of Oslo, using their textual descriptions.
+A few experiments using t-SNE, k-means clustering, and kNN on the course descriptions from the [Department of Informatics](https://www.mn.uio.no/ifi/) at the Univeristy of Oslo.
 
 Web scraping done with [requests](http://docs.python-requests.org/en/master/).
 
 Vectorization, t-SNE, k-means clustering, and kNN are done with [scikit-learn](http://scikit-learn.org/stable/index.html)
-
 
 ## Data preparation
 
@@ -13,10 +12,9 @@ For these tasks I extract and vectorize all the course descriptions from UiO's w
 
 ## t-SNE
 
-t-SNE allows us to visualize the high-dimensional data in two dimensions.
+t-SNE allow us to visualize the high-dimensional data in two dimensions.
 
 ![](https://raw.githubusercontent.com/taasmoe/Course-Similarities/master/Plots/t-sne.png)
-
 
 ## k-means
 
@@ -26,7 +24,7 @@ We can cluster the data, and visualize the results with t-SNE.
 
 ## kNN
 
-We can extract the k nearest neighbor of any course in our list.
+We can extract the k nearest neighbors of any course in our list.
 
 
 
